@@ -3,8 +3,11 @@
 require_once('include/bittorrent.php');
 require_once('console/functions.php');
 require_once('console/config.php');
+
 header("Content-type:text/html;charset=windows-1251");
+
 dbconn();
+
 if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 
     $command = trim(iconv('utf-8', 'windows-1251', $_POST['command']));
