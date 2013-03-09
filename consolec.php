@@ -25,9 +25,11 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
         cmd('PHP ERROR: Number of commands don\'t match with number of functions. (see $commands, $functions)');
     }
     $i = 0;
-    foreach ($commands as $key => $value) {
+    foreach ($commands as $key => $value) 
+    {
         $i++;
-        if ($i == $numcm && substr($command, 0, strlen($commands[$key])) != $commands[$key]) {
+        if ($i == $numcm && substr($command, 0, strlen($commands[$key])) != $commands[$key]) 
+        {
             $com = explode(" ", $command);
             $com = htmlspecialchars($com[0]);
             cmd('bash: Command "' . $com . '" was not found');
