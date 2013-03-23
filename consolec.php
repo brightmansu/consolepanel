@@ -1,4 +1,5 @@
-<? <?
+<?php
+
 #consolepanel response file by Expantano
 require_once('include/bittorrent.php');
 require_once('console/functions.php');
@@ -6,6 +7,7 @@ require_once('console/config.php');
 
 header("Content-type:text/html;charset=windows-1251");
 
+// Устанавливаем соединение с базой данных
 dbconn();
 
 if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
